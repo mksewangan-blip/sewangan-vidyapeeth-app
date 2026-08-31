@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+/* v35.11: remove obsolete PWA caches before the current runtime restores the route. */
+try{if('serviceWorker' in navigator)navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister()})})}catch(e){}
+try{if('caches' in window)caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k)})})}catch(e){}
+</script>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#FF9933">
+
+<meta name="description"
+content="Sewangan Vidyapeeth Management System">
+
+<title>SVMS - Sewangan Vidyapeeth Management System</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="assets/css/app.css?v=35.12">
+<link rel="stylesheet" href="assets/css/android.css?v=35.12">
+<link rel="stylesheet" href="assets/css/final20.css?v=35.12">
+
+<link rel="stylesheet" href="assets/css/final23_idcard.css?v=35.12">
+<style id="sv34Boot">html.sv34-boot body{visibility:hidden!important}</style>
+<script>document.documentElement.classList.add("sv34-boot")</script>
+<link rel="stylesheet" href="assets/css/admin_only_v34.css?v=35.12">
+<link rel="stylesheet" href="assets/css/v35_final_runtime.css?v=35.12">
+</head>
+
+<body>
+<!-- ===========================
+     HEADER
+=========================== -->
+
+<header
+id="appHeader"
+class="header">
+
+<div class="header-left">
+
+<img
+src="assets/images/logo.png"
+alt="SVMS Logo"
+class="logo">
+
+<div>
+
+<h1>Sewangan Vidyapeeth</h1>
+
+<p>Management System</p>
+
+</div>
+
+</div>
+
+<div class="header-right">
+
+<div id="headerSession"></div>
+
+<div id="headerDate"></div>
+
+<div id="headerTime"></div>
+
+
+
+</div>
+
+</header>
+
+<!-- ===========================
+     APPLICATION
+=========================== -->
+
+<div id="app">
+
+<!-- ===========================
+     SIDEBAR
+=========================== -->
+
+<nav id="appSidebar" class="sidebar" aria-label="Desktop navigation">
+
+<button id="menu-dashboard" data-module="dashboard" onclick="Router.open('dashboard')">🏠 Dashboard</button>
+
+<button id="menu-svcet" data-module="svcet" onclick="Router.open('svcet')">🎓 SVCET</button>
+
+<button id="menu-students" data-module="students" onclick="Router.open('students')">👨‍🎓 Students</button>
+
+<button id="menu-teachers" data-module="teachers" onclick="Router.open('teachers')">👨‍🏫 Teachers</button>
+
+<button id="menu-attendance" data-module="attendance" onclick="Router.open('attendance')">📝 Attendance</button>
+
+<button id="menu-timetable" data-module="timetable" onclick="Router.open('timetable')">🗓 Timetable</button>
+
+<button id="menu-welfare" data-module="welfare" onclick="Router.open('welfare')">🎁 Welfare</button>
+
+
+<button id="menu-inventory" data-module="inventory" onclick="Router.open('inventory')">📦 Inventory</button>
+
+<button id="menu-exams" data-module="exams" onclick="Router.open('exams')">📝 Exams</button>
+
+<button id="menu-results" data-module="results" onclick="Router.open('results')">🏆 Results</button>
+
+<button id="menu-certificates" data-module="certificates" onclick="Router.open('certificates')">📜 Certificates</button>
+
+<button id="menu-reports" data-module="reports" onclick="Router.open('reports')">📊 Reports</button>
+
+<button id="menu-notifications" data-module="notifications" onclick="Router.open('notifications')">🔔 Notifications</button>
+
+<button id="menu-settings" data-module="settings" onclick="Router.open('settings')">⚙ Settings</button>
+
+<button id="menu-users" data-module="users" onclick="Router.open('users')">👤 Users</button>
+
+</nav>
+
+<!-- ===========================
+     MAIN CONTENT
+=========================== -->
+
+<main
+id="mainContent"
+class="content">
+
+<div class="sv-boot"></div>
+
+</main>
+
+</div>
+
+<!-- ==========================================
+                FOOTER
+=========================================== -->
+
+<footer
+id="appFooter"
+class="footer">
+
+<div>
+
+© 2026 Sewangan Vidyapeeth Management System
+
+</div>
+
+<div>
+
+
+
+</div>
+
+</footer>
+
+<!-- ==========================================
+            CORE JAVASCRIPT FILES
+=========================================== -->
+
+
+<!-- ==========================================
+            LOGIN
+=========================================== -->
+<!-- LOGIN -->
+
+<!-- ==========================================
+            DASHBOARD MODULE
+=========================================== -->
+
+<!-- ==========================================
+            SVCET
+=========================================== -->
+
+<!-- ==========================================
+            STUDENTS
+=========================================== -->
+
+<!-- STUDENTS -->
+
+<!-- ==========================================
+            TEACHERS
+=========================================== -->
+
+<!-- TEACHERS -->
+
+<!-- ==========================================
+            ATTENDANCE
+=========================================== -->
+
+<!-- ATTENDANCE -->
+
+<!-- ==========================================
+            TIMETABLE
+=========================================== -->
+
+<!-- TIMETABLE -->
+
+<!-- ==========================================
+            WELFARE
+=========================================== -->
+
+<!-- WELFARE -->
+
+<!-- ==========================================
+            LIBRARY
+=========================================== -->
+
+<!-- ==========================================
+            INVENTORY
+=========================================== -->
+
+<!-- ==========================================
+            EXAMS
+=========================================== -->
+
+<!-- ==========================================
+            RESULTS
+=========================================== -->
+
+<!-- ==========================================
+            CERTIFICATES
+=========================================== -->
+
+<!-- ==========================================
+            REPORTS
+=========================================== -->
+
+<!-- ==========================================
+            USERS
+=========================================== -->
+
+<!-- ==========================================
+            NOTIFICATIONS
+=========================================== -->
+
+<!-- ==========================================
+            SETTINGS
+=========================================== -->
+
+<script>
+/* v35.9: frontend must never revive an older cached UI */
+if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister())).catch(()=>{});}
+if(window.caches){caches.keys().then(ks=>Promise.all(ks.map(k=>caches.delete(k)))).catch(()=>{});}
+</script>
+<script src="assets/face-api/face-api.min.js"></script>
+
+
+<script>
+/* Offline-safe Firebase fallback: local app continues when internet is unavailable. */
+if (typeof window.firebase === "undefined") {
+  window.firebase = {
+    apps: [{}],
+    initializeApp: function(){ return {}; },
+    database: function(){
+      return { ref: function(){ return {
+        set: async function(){ return false; },
+        once: async function(){ return { val: function(){ return null; } }; },
+        on: function(){}
+      }; }};
+    }
+  };
+}
+</script>
+
+<script src="assets/js/bundles/core.js?v=35.12"></script>
+<script src="assets/js/bundles/login.js?v=35.12"></script>
+<script src="assets/js/bundles/dashboard.js?v=35.12"></script>
+<script src="assets/js/bundles/svcet.js?v=35.12"></script>
+<script src="assets/js/bundles/students.js?v=35.12"></script>
+<script src="assets/js/bundles/teachers.js?v=35.12"></script>
+<script src="assets/js/bundles/attendance.js?v=35.12"></script>
+<script src="assets/js/bundles/timetable.js?v=35.12"></script>
+<script src="assets/js/bundles/welfare.js?v=35.12"></script>
+<script src="assets/js/bundles/inventory.js?v=35.12"></script>
+
+<script src="assets/js/bundles/exams_results.js?v=35.12"></script>
+<script src="assets/js/bundles/certificates_reports.js?v=35.12"></script>
+<script src="assets/js/bundles/users_notifications.js?v=35.12"></script>
+<script src="assets/js/bundles/settings_sync.js?v=35.12"></script>
+<script async src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="assets/js/android_features.js?v=35.12"></script>
+<script src="assets/js/final20_features.js?v=35.12"></script>
+<script src="assets/js/final23_idcard.js?v=35.12"></script>
+<script src="assets/js/admin_only_v34.js?v=35.12"></script>
+<script src="assets/js/v35_final_runtime.js?v=35.12"></script>
+<script src="assets/js/single_boot.js?v=35.12"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "Sewangan Vidyapeeth",
+  "short_name": "SV",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff8ef",
+  "theme_color": "#FF9933",
+  "description": "Sewangan Vidyapeeth - A Free Coaching Initiative under the Aegis of Sewangan Charitable Trust"
+}
