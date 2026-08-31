@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const $=s=>document.querySelector(s), app=$('#app'), STATE='sv_final_state_v2', DB='sv_final_db_v2';
-const API='https://script.google.com/macros/s/AKfycbytewRtpvCG2IXcbE_TryG58AOtp_MImIyikI_bMeIVlhPCVkF2PIrprr-RCG9wfjWJ0A/exec';
+const API='https://script.google.com/macros/s/AKfycbxhVY79DzFqbBWrP2cAPRdfqTAOcS6hKpH6OYSTz7R3z_9xQDa6BZjSkfOlUMvZO4FlzA/exec';
 const seed={students:[],teachers:[],attendance:[],notices:[],faces:[],accounts:[],notifications:[],generic:{}};
 let db=Object.assign(seed,JSON.parse(localStorage.getItem(DB)||'{}'));let state=JSON.parse(localStorage.getItem(STATE)||'null')||{route:'login',ctx:{}};
 let stream=null,captures=[],facing='user';
